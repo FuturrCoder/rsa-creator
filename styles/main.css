@@ -1,0 +1,72 @@
+body {
+  background: #fafafa;
+  font-family: "Comic Sans MS";
+  color: #000;
+}
+
+button {
+  font-family: "Comic Sans MS";
+  font-size: 0.7rem;
+  background-color: #fff;
+  border-radius: 7px;
+  border: 2px solid #aaa;
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #aaa;
+}
+
+input {
+  font-size: 0.7rem;
+  background-color: #ddd;
+  border-radius: none;
+  transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+
+input:focus {
+  background-color: #fff;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.24), 0 10px 35px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+  padding: 10px;
+}
+
+.rsa {
+  margin: 50px auto 0 auto;
+  padding: 10px;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+#choiceLeft {
+  background-color: #aaa;
+  font-size: 0.8rem;
+  border-right: 0px;
+  border-radius: 7px 0px 0px 7px;
+}
+
+#choiceRight {
+  font-size: 0.8rem;
+  border-radius: 0px 7px 7px 0px;
+}
+
+#rOptions {
+  display: block;
+}
+
+#mOptions {
+  display: none;
+}

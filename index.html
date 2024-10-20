@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSA creator</title>
+
+  <script data-main="scripts/main.js" src="scripts/require.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#da532c">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <h1>RSA Creator</h1>
+
+  <div class="rsa">
+    <h2>Generate RSA Keys</h2>
+    <p>Generation: <button onclick="setRandom()" id="choiceLeft">Random</button><button onclick="setManual()" id="choiceRight">Manual</button></p>
+    <div id="rOptions">
+      <p>Range of primes: <input type="number" value="170141183460469231731687303715884105728" id="pMin"> to <input type="number" value="340282366920938463463374607431768211455" id="pMax"></p>
+    </div>
+    <div id="mOptions">
+      <p>Prime #1 (p): </p>
+      <p>Prime #2 (q): </p>
+      <p>Encryption exponent (e): </p>
+    </div>
+    <button onclick="generateKeys()">Generate Keys</button>
+    <br>
+    <div id="n"></div>
+    <div id="e"></div>
+    <div id="d"></div>
+  </div>
+
+  <div class="rsa">
+    <h2>Encrypt message</h2>
+    <h5><em>Enter one word at a time <br>
+        38 letters maximum</em></h5>
+    <br>
+    <p>Enter what you want to encrypt here: <input type="text" id="enInput"></p>
+    <br>
+    <br>
+    <p>Enter encryption exponent (e) here: <input type="number" id="eInput1"></p>
+    <p>Enter modulus (n) here: <input type="number" id="nInput1"></p>
+    <button onclick="encrypt()">Encrypt</button>
+    <br>
+    <br>
+    <div id="encrypted"></div>
+  </div>
+
+  <div class="rsa">
+    <h2>Decrypt message</h2>
+    <br>
+    <p>Enter encrypted message here: <input type="number" id="deInput"></p>
+    <br>
+    <br>
+    <p>Enter decryption exponent (d) here: <input type="number" id="dInput2"></p>
+    <p>Enter modulus (n) here: <input type="number" id="nInput2"></p>
+    <button onclick="decrypt()">Decrypt</button>
+    <br>
+    <br>
+    <div id="decrypted"></div>
+  </div>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    -->
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="./scripts/jquery.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
